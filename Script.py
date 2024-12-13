@@ -15,7 +15,7 @@ async def get_city_info(*, city: str) -> dict:
                 print('Данных нет')
 
 
-cities = ['Moscow', 'Dubai', 'Kotovo', 'London', 'New York', 'Sochi']
+cities = ['Moscow', 'Dubai', 'Kotovo', 'London', 'New York', 'Sochi', 'Volgograd']
 
 
 async def main(cities_):
