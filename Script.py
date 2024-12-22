@@ -5,7 +5,7 @@ from aiohttp import ClientSession
 async def get_city_info(*, city: str) -> dict:
     async with ClientSession() as session:
         url = 'https://api.openweathermap.org/data/2.5/weather'
-        params={'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
 
         async with session.get(url=url, params=params) as responce:
             weather_json = await responce.json()
@@ -15,7 +15,9 @@ async def get_city_info(*, city: str) -> dict:
                 print('Данных нет')
 
 
-cities = ['Moscow', 'Dubai', 'Kotovo', 'London', 'New York', 'Sochi', 'Volgograd']
+cities = [
+    'Moscow', 'Dubai', 'Kotovo', 'London', 'New York', 'Sochi', 'Volgograd'
+    ]
 
 
 async def main(cities_):
@@ -31,3 +33,5 @@ async def main(cities_):
 
 
 asyncio.run(main(cities_=cities))
+
+print('First Change')
